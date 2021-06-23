@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "company_forms",
+  "info": {
+    "name": "company_form",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company_name": {
+      "type": "string",
+      "required": true
+    },
+    "company_address": {
+      "type": "string",
+      "required": true
+    },
+    "company_url": {
+      "type": "string",
+      "default": "NAN",
+      "required": false
+    },
+    "yetkili_person": {
+      "type": "string",
+      "required": true
+    },
+    "company_email": {
+      "type": "email",
+      "required": true
+    },
+    "company_number": {
+      "type": "string",
+      "required": true
+    },
+    "job_lang": {
+      "type": "string",
+      "required": true
+    },
+    "job_title": {
+      "type": "string",
+      "required": true
+    },
+    "job_description": {
+      "type": "richtext",
+      "required": true
+    },
+    "job_hours": {
+      "type": "integer"
+    },
+    "job_skills": {
+      "type": "richtext"
+    },
+    "sallary": {
+      "type": "decimal",
+      "required": true
+    },
+    "category": {
+      "model": "category",
+      "via": "company_forms"
+    }
+  }
+}
